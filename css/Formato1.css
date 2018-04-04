@@ -1,0 +1,17 @@
+.panel-default { 
+     padding-left: 5em;
+     padding-right: 5em;
+    width: 50%; 
+    height: 100px; 
+}
+
+#BotonFiltro1{
+    padding: 1em;
+}
+
+body {
+  padding: 0em;
+  font-family: Georgia, "Times New Roman",
+        Times, serif;
+  color: purple;
+  background-color: #d8da3d }
