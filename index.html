@@ -106,8 +106,12 @@
                 var markers = [
                     ['UNS', -38.701839, -62.2713265],
                     ['cOMEDOR', -38.702386, -62.269895],
-                    ['dcic', -38.7018105, -62.2865402]
+                    ['dcic', -38.7018105, -62.269895]
                 ];
+
+                iniciarMapas(markers);
+            }
+            function iniciarMapas(markers) {
 
                 var map = new google.maps.Map(document.getElementById('map'), {
                     zoom: 17,
@@ -115,15 +119,15 @@
                 });
                 for (i = 0; i < markers.length; i++) {
                     var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
-                    
+
                     marker = new google.maps.Marker({
                         position: position,
                         map: map,
                         title: markers[i][0]
                     });
-                 
-                   marker.setMap(map);
-                    
+
+                    marker.setMap(map);
+
                 }
             }
         </script>
@@ -152,11 +156,16 @@
         </script>
 
 
+       <div class="g-comments"
+     data-href="http://localhost:8383/Proyecto1-Tema1/index.html"
+     data-width="800"
+     data-first_party_property="BLOGGER"></div>
 
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="js/bootstrap.min.js"></script>
+        <script src="https://apis.google.com/js/plusone.js"></script>
     </body>
 </html>
