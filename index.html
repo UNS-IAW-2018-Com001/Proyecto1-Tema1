@@ -20,8 +20,8 @@
         <![endif]-->
     </head>
     <body>
-        
- <!--BARRA DE INICIO-->
+
+        <!--BARRA DE INICIO-->
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -47,8 +47,8 @@
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav>
- 
- <!--PANEL FILTROS-->
+
+        <!--PANEL FILTROS-->
         <div class="panel panel-default">
             <div class="panel-body">FILTROS</div>
             <div class="dropdown">
@@ -99,44 +99,57 @@
                 </ul>
             </div>
         </div>
- 
-    <h3>My Google Maps Demo</h3>
-    <div id="map"></div>
-    <script>
-      function initMap() {
-        var uns = {lat: -38.701839,lng:-62.2713265};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-          position: uns,
-          map: map
-          title:"Alem Uns"
-        });
-      }
-        var myLatlng = new google.maps.LatLng(38.7018105,-62.2865402);
-        var markerDCIC = new google.maps.Marker({
-            position: myLatlng,
-            title:"DCIC"
-        });
+
+        <div id="map"></div>
+        <script>
+            function initMap() {
+                var markers = [
+                    ['UNS', -38.701839, -62.2713265],
+                    ['cOMEDOR', -38.702386, -62.269895],
+                    ['dcic', -38.7018105, -62.2865402]
+                ];
+
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 17,
+                    center: new google.maps.LatLng(markers[0][1], markers[0][2])
+                });
+                for (i = 0; i < markers.length; i++) {
+                    var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
+                    
+                    marker = new google.maps.Marker({
+                        position: position,
+                        map: map,
+                        title: markers[i][0]
+                    });
+                 
+                   marker.setMap(map);
+                    
+                }
+            }
+        </script>
+        <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByOCB3dfHze0DkCseu2AB5xXw3lWpM64E&callback=initMap">
+        </script>
 
 
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByOCB3dfHze0DkCseu2AB5xXw3lWpM64E&callback=initMap">
-    </script>
+        <div id="fb-root"></div>
+        <script>(function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id))
+                    return;
+                js = d.createElement(s);
+                js.id = id;
+                js.src = 'https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.12';
+                fjs.parentNode.insertBefore(js, fjs);
+            }
+            (document, 'script', 'facebook-jssdk'));</script>
 
 
+        <div class="fb-comments" data-href="http://localhost:8383/Proyecto1-Tema1/index.html"  data-numposts="5"></div>
 
-
-
-
-
-
-
-
-
+        <script>
+            $("#fb-comments").width((window).width());
+        </script>
 
 
 
