@@ -102,34 +102,54 @@
 
         <div id="map"></div>
         <script>
+	    			var map,lugares,posicionActual,posicionDestino;
             function initMap() {
-                var markers = [
+								obtenerLugares();
+								crearMapa();
+								cargarPosicionActual();
+                cargarLugares();
+            }
+						function obtenerLugares(){
+								lugares = [
                     ['UNS', -38.701839, -62.2713265],
-                    ['cOMEDOR', -38.702386, -62.269895],
+                    ['Comedor', -38.702386, -62.269895],
                     ['dcic', -38.7018105, -62.269895]
                 ];
-
-                iniciarMapas(markers);
-            }
-            function iniciarMapas(markers) {
-
-                var map = new google.maps.Map(document.getElementById('map'), {
+						}
+						function crearMapa(){
+								posicionActual=new google.maps.LatLng(lugares[0][1], lugares[0][2])
+                map = new google.maps.Map(document.getElementById('map'), {
                     zoom: 17,
-                    center: new google.maps.LatLng(markers[0][1], markers[0][2])
+                    center: posicionActual
                 });
-                for (i = 0; i < markers.length; i++) {
-                    var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
-
-                    marker = new google.maps.Marker({
-                        position: position,
-                        map: map,
-                        title: markers[i][0]
-                    });
-
-                    marker.setMap(map);
+						}
+						function cargarPosicionActual(){
+								if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(function (position) {
+                        posicionActual = {
+                            lat: position.coords.latitude,
+                            lng: position.coords.longitude
+                        };
+												agregarLugarAlMapa(posicionActual,"Usted esta aquí");
+												map.setCenter(posicionActual);
+                    }, function(){});
+                }
+						}
+            function cargarLugares() {
+                for (i = 0; i < lugares.length; i++) {
+                    var posicion = new google.maps.LatLng(lugares[i][1], lugares[i][2]);
+										agregarLugarAlMapa(posicion,lugares[i][0]);
 
                 }
             }
+						function agregarLugarAlMapa(posicion,titulo){
+              marker = new google.maps.Marker({
+              	position: posicion,
+              	map: map,
+              	title: titulo
+              });
+         			marker.setMap(map);
+						}
         </script>
         <script async defer
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByOCB3dfHze0DkCseu2AB5xXw3lWpM64E&callback=initMap">
