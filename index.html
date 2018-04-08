@@ -308,8 +308,8 @@
         crearGaleria(imagenes);
       }
       function crearGaleria(imagenes){
+        $("#GaleriadeFotos").empty()
         var i,cadena="";
-
         for (i = 0; i < imagenes.length; i++) {
             if((i%4)==0){
                cadena=cadena+startRow(i);
