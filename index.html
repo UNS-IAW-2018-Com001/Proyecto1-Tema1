@@ -9,6 +9,7 @@
 
         <!-- Bootstrap -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="lightbox/css/lightbox.min.css">
         <link rel="stylesheet" href="css/Formato1.css" type="text/css"> 
 
 
@@ -162,7 +163,21 @@
                   <h3 class="panel-title"><center>Imágenes</center></h3>
                 </div>
                 <div class="panel-body" id="bodyimagenes">
-                 Aca irian las fotos
+                  <center>
+                    Aca irian las fotos
+                  </center>  
+                  <div class="container">
+                    <div class='row'>
+                      <div class='col-md-8'>
+                        <div class="carousel slide media-carousel" id="media">
+                          <div class="carousel-inner" id="GaleriadeFotos">
+                          </div>
+                          <a data-slide="prev" href="#media" class="left carousel-control">‹</a>
+                          <a data-slide="next" href="#media" class="right carousel-control">›</a>
+                        </div>                          
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -205,6 +220,7 @@
                 });
   							//directionsDisplay.setMap(map);
 								//directionsDisplay.setPanel(document.getElementById('right-panel'));
+              crearFotos();
 						}
 						function cargarPosicionActual(){
 								if (navigator.geolocation) {
@@ -281,6 +297,58 @@
             (document, 'script', 'facebook-jssdk'));</script>
 
         
+  <script src="lightbox/js/lightbox.min.js"></script>
+  <script>
+	      lightbox.option({
+		    'albumLabel': "Imagen %1 de %2"
+	      })
+
+      function crearFotos(){
+        var imagenes=["img1.jpg","img2.jpg","img3.jpg","img4.jpg","img5.jpg","img6.jpg","img7.jpg"];
+        crearGaleria(imagenes);
+      }
+      function crearGaleria(imagenes){
+        var i,cadena="";
+
+        for (i = 0; i < imagenes.length; i++) {
+            if((i%4)==0){
+               cadena=cadena+startRow(i);
+            }
+           cadena=cadena+insertarImagen(imagenes[i],"Titulo "+i,"Descripcion "+i);
+            if((i%4)==3 || i==imagenes.length-1){
+              cadena=cadena+endRow(i);
+            }
+       }
+        $("#GaleriadeFotos").append(cadena);
+     }
+      function startRow(i){
+          if(i==0)
+            return '<div class=\"item active\"><div class=\"row\">';
+          else
+            return'<div class=\"item\"><div class=\"row\">';
+      }
+
+      function endRow(){
+        return '</div></div>';
+      }
+
+      function insertarImagen(imagen,titulo,descripcion){
+        var ret="<div class=\"col-md-3\"><a href=\"images/"+imagen+"\" data-lightbox=\"example-set\" ";
+        ret=ret+"data-title=\""+titulo+"\"><img src=\"images/"+imagen+"\" class=\"img-thumbnail\"></a>";
+        ret=ret+"<p>"+descripcion+"</p></div>";
+        return ret;
+      }
+
+
+      $(document).ready(function() {
+        $('#media').carousel({
+          pause: true,
+          interval: false,
+        });
+
+      });
+
+    </script>
       <div class="row">
         <div class="col-md-4">
           <div class="fb-comments" 
