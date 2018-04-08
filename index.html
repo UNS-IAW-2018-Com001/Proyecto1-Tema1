@@ -8,10 +8,9 @@
         <title>Bootstrap 101 Template</title>
 
         <!-- Bootstrap -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="lightbox/css/lightbox.min.css">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/Formato1.css" type="text/css"> 
-
+        <link rel="stylesheet" href="lightbox/css/lightbox.min.css">
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -168,7 +167,7 @@
                   </center>  
                   <div class="container">
                     <div class='row'>
-                      <div class='col-md-8'>
+                      <div class='col-md-12'>
                         <div class="carousel slide media-carousel" id="media">
                           <div class="carousel-inner" id="GaleriadeFotos">
                           </div>
@@ -190,6 +189,7 @@
 <div class="row" id="margen"><h1>   </h1></div>
         
 <div id="right-panel"></div>
+
 
         <script>
 						var directionsDisplay = new google.maps.DirectionsRenderer;
@@ -270,8 +270,7 @@
 
   						});
 																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																															}
-
-
+  
 
 
 
@@ -297,11 +296,8 @@
             (document, 'script', 'facebook-jssdk'));</script>
 
         
-  <script src="lightbox/js/lightbox.min.js"></script>
   <script>
-	      lightbox.option({
-		    'albumLabel': "Imagen %1 de %2"
-	      })
+	      
 
       function crearFotos(){
         var imagenes=["img1.jpg","img2.jpg","img3.jpg","img4.jpg","img5.jpg","img6.jpg","img7.jpg"];
@@ -320,6 +316,10 @@
             }
        }
         $("#GaleriadeFotos").append(cadena);
+        $('#media').carousel({
+          pause: true,
+          interval: false,
+        });
      }
       function startRow(i){
           if(i==0)
@@ -341,10 +341,7 @@
 
 
       $(document).ready(function() {
-        $('#media').carousel({
-          pause: true,
-          interval: false,
-        });
+        
 
       });
 
@@ -366,9 +363,15 @@
           
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="js/bootstrap.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         <script src="https://apis.google.com/js/plusone.js"></script>
+        <script src="lightbox/js/lightbox.min.js"></script>
+        <script>
+          lightbox.option({
+            'albumLabel': "Imagen %1 de %2"
+        })
+  </script>
     </body>
 </html>
