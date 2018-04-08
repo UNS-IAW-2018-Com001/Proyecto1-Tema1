@@ -1,0 +1,19 @@
+
+{
+	"Usuario_Administrador":
+	{
+		"ubicacion":
+				{
+					"calle":"Chiclana",
+					"numero":99,
+					"Ciudad":"Bahia Blanca",
+					"provincia":"Buenos Aires",
+					"pais":"Argentina",
+					"latitud":-38.7172208,
+					"longitud":-62.2684985			
+				},
+		"id":"Pepe_Sandoval",
+		"constraseña":"59Sando59"
+
+	}
+}

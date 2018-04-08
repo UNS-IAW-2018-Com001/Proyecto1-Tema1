@@ -1,3 +1,10 @@
+body {
+  padding: 1em;
+  font-family: Georgia, "Times New Roman",
+        Times, serif;
+  color: white;
+  background-color: #003557 }
+
 .panel-default { 
      padding-left: 5em;
      padding-right: 5em;
@@ -12,21 +19,13 @@
     padding: 1em;
 }
 
-body {
-  padding: 0em;
-  font-family: Georgia, "Times New Roman",
-        Times, serif;
-  color: white;
-  background-color: #003557 }
-
-
  #map {
    width: 100%;
    height: 400px;
    background-color: grey;
  }
 #Comentarios{
-  width:100%
+  width:100%;
   padding-left: 5em;
   padding-right: 5em;
 }
@@ -36,7 +35,8 @@ panel{
 #margen{
   height:100 px;
 }
-#listas{
+#gruposyRamas{
+    background-color: #FFFFFF; 
    height: 200px;
   overflow-y:scroll;
 }

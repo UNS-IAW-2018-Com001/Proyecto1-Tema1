@@ -1,0 +1,110 @@
+{
+	"Asociacion":
+	{
+		"nombre": "Scouts de Argentina Asociacion Civil",
+		"año_de_fundacion": "1960",
+		"dia_de_actividad": [ "sabado"],
+		"grupos":
+		[
+			{
+				"nombre":"Coronel de Marina Leonardo Rosales",
+				"codigo":234,
+				"fecha_Creacion":"25/10/1986",
+				"horario_Inicio":"14:00",
+				"horario_fin":"17:30",
+				"sitio_web":"",
+				"telefono":0,
+				"email":"gruporosales@gmail.com",
+				"comentarios": [],
+				"religion":"heterogenea",
+				"ubicacion":
+				{
+					"calle":"salta",
+					"numero":262,
+					"ciudad":"Punta Alta",
+					"provincia":"Buenos Aires",
+					"pais":"Argentina",
+					"latitud":-38.8693346,
+					"longitud": -62.0639021				
+				},
+				"ramas":
+				[
+					{
+						"nombre":"Unidad Traulen",
+						"edad_minima":11,
+						"edad_maxima":13,
+						"fechaInscripcion_inicio":"01/04",
+						"fechaIscripcion_fin":"25/05",
+						"comentarios":[
+							{
+								"id":"pepe",
+								"Texto":"Que lindo lugar!",
+								"Fecha":"27/03/2018",
+								"Horario":"02:15"
+							}
+						],
+						"fotos":[],
+						"tipo":"mixta"
+					},
+					{
+						"nombre":"Caminantes Penihuen",
+						"edad_minima":14,
+						"edad_maxima":17,
+						"fechaInscripcion_inicio":"01/04",
+						"fechaIscripcion_fin":"25/09",
+						"comentarios":[],
+						"fotos":[],
+						"tipo":"mixta"
+					}
+				]
+			},
+			{
+				"nombre":"Coronel Ramon Estomba",
+				"codigo":134,
+				"fecha_Creacion":"25/10/1930",
+				"horario_Inicio":"14:30",
+				"horario_fin":"18:00",
+				"sitio_web":"",
+				"telefono":291154337490,
+				"email":"GSRE@gmail.com",
+				"comentarios": [
+					{
+								"id":"rosario_tucoloradita22",
+								"texto":"Muy copa2!",
+								"fecha":"28/03/2018",
+								"horario":"12:34"
+					}
+				],
+				"religion":"catolica",
+				"ubicacion":
+				{
+					"calle":"Rondeau",
+					"numero":459,
+					"ciudad":"Bahia Blanca",
+					"provincia":"Buenos Aires",
+					"pais":"Argentina",
+					"latitud":-38.721432,
+					"longitud":-62.274445				
+				},
+				"ramas":
+				[
+					{
+						"nombre":"Manada Mowgli",
+						"edad_minima":14,
+						"edad_maxima":17,
+						"fechaInscripcion_inicio":"01/04",
+						"fechaIscripcion_fin":"25/09",
+						"comentarios":[],
+						"fotos":
+						[
+							{
+								"uri":"https://i.ytimg.com/vi/Q52tJJST1ho/hqdefault.jpg"
+							}
+						],
+						"tipo":"mixta"
+					}
+				]
+			}
+		]
+	}
+}

@@ -1,0 +1,19 @@
+[
+    {
+        "nombre": "Jamón y Queso",
+        "precio": 190,
+        "tipo" : "clásicas"
+    },
+    {
+        "nombre": "Fugazzeta",
+        "precio": 200,
+        "tipo" : "clásicas"
+    },
+    
+   
+    {
+        "nombre": "Ciervo Ahumado",
+        "precio": 250,
+        "tipo" : "especiales"
+   }
+]

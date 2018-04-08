@@ -1,0 +1,16 @@
+{
+	"Usuario_Visitante":
+	{
+		"cuenta": "#@445_Sandoval@gmail.com",
+		"ubicacion":
+				{
+					"calle":"Av. Alem",
+					"numero":1253,
+					"Ciudad":"Bahia Blanca",
+					"provincia":"Buenos Aires",
+					"pais":"Argentina",
+					"latitud":-38.7021908,
+					"longitud":-62.2719738				
+				}
+	}
+}
