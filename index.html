@@ -22,31 +22,47 @@
     <body>
 
         <!--BARRA DE INICIO-->
-        <nav class="navbar navbar-inverse">
-            <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="#">INICIO</a>
-                    <a class="navbar-brand" href="#">FORMATO 1</a>
-                    <a class="navbar-brand" href="#">FORMATO 2</a>
-                </div>
 
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="nav navbar-nav navbar-right">
-                    <ul class="nav navbar-nav">
-                        <li><p class="navbar-text">INICIAR SESION</p></li>
-                    </ul>
-                    <form class="navbar-form navbar-left">
+<!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Scouts y Guias en Argentina</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Estilos <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Estilo 1</a></li>
+                <li><a href="#">Estilo 2</a></li>
+              </ul>
+            </li>
+          </ul>
+          
+          <ul class="nav navbar-nav navbar-right">
+                  <form class="navbar-form navbar-rigth">
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="Usuario">
                             <input type="text" class="form-control" placeholder="Constraseña">
                         </div>
                         <button type="submit" class="btn btn-default">ingresar</button>
                     </form>
+          </ul>       
 
-                </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
-        </nav>
+        </div><!-- /.navbar-collapse -->
+
+      </div>
+
+    </nav>
+
+
 
         <!--PANEL FILTROS-->
         <div class="panel panel-default">
@@ -207,19 +223,22 @@
             }
             (document, 'script', 'facebook-jssdk'));</script>
 
+        
+      <div class="row">
+        <div class="col-md-4">
+          <div class="fb-comments" 
+               data-href="http://localhost:8383/Proyecto1-Tema1/index.html"  
+               data-width="100%"data-numposts="5"></div>
+        </div>
+        <div class="col-md-8">
+              <div class="g-comments"
+               data-href="http://localhost:8383/Proyecto1-Tema1/index.html"
+               
+               data-first_party_property="BLOGGER"></div>
+        </div>
+      </div>
 
-        <div class="fb-comments" data-href="http://localhost:8383/Proyecto1-Tema1/index.html"  data-numposts="5"></div>
-
-        <script>
-            $("#fb-comments").width((window).width());
-        </script>
-
-
-       <div class="g-comments"
-     data-href="http://localhost:8383/Proyecto1-Tema1/index.html"
-     data-width="800"
-     data-first_party_property="BLOGGER"></div>
-
+          
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
