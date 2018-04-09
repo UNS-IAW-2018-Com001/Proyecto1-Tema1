@@ -34,7 +34,6 @@ function agregarGrupo(grupo) {
 function mostrarRama(nombre_cod) {
     mostrarInfoGrupo(nombre_cod);
     seleccionarTabRama();
-    location.href='index.html/?codigo='+nombre_cod;
     var raw;
     $.each(datos, function (index, grupo) {
         if (nombre_cod == (grupo.codigo)) {

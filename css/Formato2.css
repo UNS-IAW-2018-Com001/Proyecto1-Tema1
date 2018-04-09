@@ -1,10 +1,10 @@
 body {
    padding-left: 5em;
-     padding-right: 5em;
-  font-family: Georgia, "Times New Roman",
+   padding-right: 5em;
+   font-family: Georgia, "Times New Roman",
         Times, serif;
   color: white;
-  background-color: #a94442 
+  background-color: #a94442; 
 }
 
 
@@ -14,10 +14,15 @@ body {
 }
 
 #filtros{
-    height: 100%;
-    width:200%; 
+    height: 100%; 
+    width:100%;
+    background-color: #f5e79e;
+    color:#222222;
+    float:bottom;
 }
-
+#DivGruposyRamas{
+    float: top;
+}
 #dropdownMenu1{
     padding-top:25px;
     height:100%;
@@ -30,6 +35,12 @@ body {
    width: 100%;
    height: 400px;
    background-color: grey;
+ }
+ #panelIzquierdo{
+     float:right;
+ }
+ #panelDerecho{
+     float:left;
  }
  /*
 #Comentarios{
