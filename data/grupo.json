@@ -31,6 +31,7 @@
 				[
 					{
 						"nombre":"Unidad Traulen",
+                                                "numeracion":1,
 						"edad_minima":11,
 						"edad_maxima":13,
 						"fechaInscripcion_inicio":"01/04",
@@ -48,6 +49,7 @@
 					},
 					{
 						"nombre":"Caminantes Penihuen",
+                                                "numeracion":2,
 						"edad_minima":14,
 						"edad_maxima":17,
 						"fechaInscripcion_inicio":"01/04",
@@ -90,6 +92,7 @@
 				[
 					{
 						"nombre":"Manada Mowgli",
+                                                "numeracion":3,
 						"edad_minima":14,
 						"edad_maxima":17,
 						"fechaInscripcion_inicio":"01/04",

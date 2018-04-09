@@ -3,7 +3,7 @@ var pizzas;
 
 $(function () {
     $.get("./data/grupo.json", function (data) {
-        mostrarGrupo(data.Asociacion.grupos);
+       mostrarGrupo(data.Asociacion.grupos);
 
     });
 });
@@ -14,7 +14,10 @@ function mostrarGrupo(data) {
     $.each(data, function (index, grupo) {
         agregarGrupo(grupo);
     });
+    
+    $('#panelInfo').toggle();
 }
+
 function mostrarGrupo2() {
     mostrarGrupo(datos);
 }
@@ -25,22 +28,79 @@ function agregarGrupo(grupo) {
 
 }
 
-function mostrarRama(nombre_cod) {
 
+function mostrarRama(nombre_cod) {
+    mostrarInfoGrupo(nombre_cod);
     var raw;
     $.each(datos, function (index, grupo) {
         if (nombre_cod == (grupo.codigo)) {
             $("#gruposyRamas").empty();
-            $.each(grupo.ramas, function (index, rama) {
-                raw = $("<button type=\"button\" class=\"list-group-item\"></button>").text(rama.nombre);
+            $.each(grupo.ramas, function (index, rama) {                         
+                raw = $("<button type=\"button\" class=\"list-group-item\" onclick=\"mostrarInfoRama(" + rama.numeracion + ")\"></button>").text(rama.nombre);
+             $("#gruposyRamas").append(raw);
             });
-            $("#gruposyRamas").append(raw);
-         
+           
+        }
+
+    });
+}
+function mostrarInfoGrupo(nombre_cod) {
+    $('#panelInfo').toggle();
+    $.each(datos, function (index, grupo) {
+        if (nombre_cod == (grupo.codigo)) {
+            $("#boddy2").empty();
+            $("#boddy2").append("<dt>Nombre grupo:</dt>");
+            $("#boddy2").append($("<dd></dd>").text(grupo.nombre));
+
+            $("#boddy2").append("<dt>Código:</dt>");
+            $("#boddy2").append($("<dd></dd>").text(grupo.codigo));
+
+            $("#boddy2").append("<dt>Fecha de creación:</dt>");
+            $("#boddy2").append($("<dd></dd>").text(grupo.fecha_Creacion));
+
+            $("#boddy2").append("<dt>Horario inicio:</dt>");
+            $("#boddy2").append($("<dd></dd>").text(grupo.horario_Inicio));
+
+            $("#boddy2").append("<dt>Horario finalización:</dt>");
+            $("#boddy2").append($("<dd></dd>").text(grupo.horario_fin));
+
+            $("#boddy2").append("<dt>Sitio web:</dt>");
+            $("#boddy2").append($("<dd></dd>").text(grupo.sitio_web));
+
+            $("#boddy2").append("<dt>Telefono:</dt>");
+            $("#boddy2").append($("<dd></dd>").text(grupo.telefono));
+
+            $("#boddy2").append("<dt>Email:</dt>");
+            $("#boddy2").append($("<dd></dd>").text(grupo.email));
+
+            $("#boddy2").append("<dt>Religion:</dt>");
+            $("#boddy2").append($("<dd></dd>").text(grupo.religion));
+
+
         }
 
     });
 }
 
+function mostrarInfoRama(num) {
+    $.each(datos, function (index, grupo) {
+        $.each(grupo.ramas, function (index, rama) {
+            if (num == rama.numeracion) {
+                $("#boddy2").empty();
+                $("#boddy2").append("<dt>Nombre rama:</dt>");
+                $("#boddy2").append($("<dd></dd>").text(rama.nombre));
+                $("#boddy2").append("<dt>Edad minima:</dt>");
+                $("#boddy2").append($("<dd></dd>").text(rama.edad_minima));
+                $("#boddy2").append("<dt>Edad maxima:</dt>");
+                $("#boddy2").append($("<dd></dd>").text(rama.edad_maxima));
+                $("#boddy2").append("<dt>Fecha inicio inscripcion:</dt>");
+                $("#boddy2").append($("<dd></dd>").text(rama.fechaInscripcion_inicio));
+                $("#boddy2").append("<dt>Fecha cierre inscripcion:</dt>");
+                $("#boddy2").append($("<dd></dd>").text(rama.fechaIscripcion_fin));
+                $("#boddy2").append("<dt>Tipo:</dt>");
+                $("#boddy2").append($("<dd></dd>").text(rama.tipo));
+          }
 
-
-
+        });
+    });
+}
