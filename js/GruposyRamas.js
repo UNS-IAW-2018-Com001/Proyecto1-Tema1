@@ -16,7 +16,7 @@ function mostrarGrupo(data) {
         agregarGrupo(grupo);
     });
     
-    $('#panelInfo').toggle();
+    $('#panelInfo').hide();
 }
 
 function mostrarGrupo2() {
@@ -46,7 +46,7 @@ function mostrarRama(nombre_cod) {
     });
 }
 function mostrarInfoGrupo(nombre_cod) {
-    $('#panelInfo').toggle();
+    $('#panelInfo').show();
     $.each(datos, function (index, grupo) {
         if (nombre_cod == (grupo.codigo)) {
             $("#boddy2").empty();
@@ -125,6 +125,7 @@ function obtenerLocalizacionGrupos() {
         grupoI.push(grupo.nombre);
         grupoI.push(grupo.ubicacion.latitud);
         grupoI.push(grupo.ubicacion.longitud);
+        grupoI.push(grupo.codigo);
         retorno.push(grupoI);  
    });
     return retorno;

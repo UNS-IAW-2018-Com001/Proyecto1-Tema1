@@ -154,7 +154,7 @@
 
             <div class="panel panel-info fade in collapse" id="panelInfo">
                 <div class="panel-heading">
-                    <a data-toggle="collapse"   href="#panelInfo"  class="close" >&times </a>
+       
                     <h3 class="panel-title">
                         <center>Información</center>
                     </h3>
@@ -234,7 +234,7 @@
                         lat: position.coords.latitude,
                         lng: position.coords.longitude
                     };
-                    agregarLugarAlMapa(posicionActual, "Usted esta aquí", "", "lue");
+                    agregarLugarAlMapa(posicionActual, "Usted esta aquí",0, "", "lue");
                     map.setCenter(posicionActual);
                 }, function () {});
             }
@@ -242,10 +242,10 @@
         function cargarLugares() {
             for (i = 0; i < lugares.length; i++) {
                 var posicion = new google.maps.LatLng(lugares[i][1], lugares[i][2]);
-                agregarLugarAlMapa(posicion, lugares[i][0], "" + i);
+                agregarLugarAlMapa(posicion, lugares[i][0],lugares[i][3], "" + i);
             }
         }
-        function agregarLugarAlMapa(posicion, titulo, etiqueta, color = "") {
+        function agregarLugarAlMapa(posicion, titulo,codigo, etiqueta, color = "") {
             var icono = armarIcono(color);
             marker = new google.maps.Marker({
                 position: posicion,
@@ -255,7 +255,8 @@
             });
             marker.setMap(map);
             marker.setIcon("https://mt.google.com/vt/icon?name=icons/spotlight/spotlight-waypoint-b" + color + ".png");
-            //marker.addListener('click', function() {armarRuta();});
+            marker.addListener('click', function() {mostrarInfoGrupo(codigo);});
+            
         }
         function armarIcono(color) {
             return "http://maps.google.com/mapfiles/ms/icons/" + color + "-dot.png";
