@@ -16,7 +16,7 @@
         <script type="text/javascript" src="js/GruposyRamas.js"></script>
         <script type="text/javascript" src="js/GaleriaseImagenes.js"></script>
         <script type="text/javascript" src="js/Mapas.js"></script>
-        
+
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -79,80 +79,64 @@
                 <div class="panel" id="filtros">
                     <div><center><h3 id="filtroTag">Filtrar Resultados</h3></center></div>
                     <div>
-                        <div class="dropdown">
-                            <button class="btn btn-default dropdown-toggle" type="button" id="BotonFiltro" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                Asociación
-                                <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="BotonFiltro">
-                                <li><a href="#">Action1</a></li>                
+
+
+                        <div class="btn-group">
+                            <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle">Asociación <span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
                             </ul>
-                        </div>            
-                        <div class="dropdown">
-                            <button class="btn btn-default dropdown-toggle" type="button" id="BotonFiltro2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                Edad mínima
-                                <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="BotonFiltro2">
-                                <li><a href="#">Action2</a></li>                
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle">Edad mínima <span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
                             </ul>
-                        </div>            
-                        <div class="dropdown">
-                            <button class="btn btn-default dropdown-toggle" type="button" id="BotonFiltro3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                Edad mínima
-                                <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="BotonFiltro3">
-                                <li><a href="#">Action</a></li>                
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle">Edad máxima <span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
                             </ul>
-                        </div>            
-                        <div class="dropdown">
-                            <button class="btn btn-default dropdown-toggle" type="button" id="BotonFiltro4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                Edad máxima
-                                <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="BotonFiltro4">
-                                <li><a href="#">Action</a></li>                
-                            </ul>
-                        </div>            
-                        <div class="dropdown">
-                            <button class="btn btn-default dropdown-toggle" type="button" id="BotonFiltro5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                Rama
-                                <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="BotonFiltro5">
+                        </div> <div class="btn-group">
+                            <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle">Rama <span class="caret"></span></button>
+                            <ul class="dropdown-menu">
                                 <li><a href="#">Rama femenina</a></li>   
                                 <li><a href="#">Rama masculina</a></li>  
                                 <li><a href="#">Rama mixta</a></li>  
                             </ul>
-                        </div>            
-                        <div class="dropdown">
-                            <button class="btn btn-default dropdown-toggle" type="button" id="BotonFiltro6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                Inscripción 
-                                <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="BotonFiltro6">
+                        </div> <div class="btn-group">
+                            <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle">Inscripción <span class="caret"></span></button>
+                            <ul class="dropdown-menu">
                                 <li><a href="#">Inscripción abierta</a></li>   
                                 <li><a href="#">Inscripción cerrada</a></li>  
                             </ul>
                         </div>
                     </div>
                 </div>
-
                 <ul class="nav nav-tabs">
                     <li role="presentation" id="id_grupo" class="active" onclick="mostrarGrupo2()"><a href="#">Grupos</a></li>
                     <li role="presentation" id="id_rama" ><a href="#">Ramas</a></li>
                 </ul>
                 <div class="list-group" id="gruposyRamas">  
-
                 </div>
-
             </div>
             <div class="col-md-8">
                 <div id="map"></div>
             </div>
         </div>
-
+        <script>  
+            function seleccionarTabGrupo(){
+                $("#id_rama").removeClass("active");
+                $("#id_grupo").addClass("active");
+            }
+            function seleccionarTabRama(){
+                $("#id_grupo").removeClass("active");
+                $("#id_rama").addClass("active");
+            }
+        </script>
 
         <div class="row" id="PanelInformacion"   class="info">
 
@@ -196,7 +180,7 @@
         <div>
 
         </div> 
-        
+
         <div class="row" id="margen"><h1>   </h1></div>
 
         <div id="right-panel"></div>

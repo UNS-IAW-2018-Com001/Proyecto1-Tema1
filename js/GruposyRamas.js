@@ -20,6 +20,7 @@ function mostrarGrupo(data) {
 }
 
 function mostrarGrupo2() {
+    seleccionarTabGrupo();
     mostrarGrupo(datos);
 }
 
@@ -32,6 +33,7 @@ function agregarGrupo(grupo) {
 
 function mostrarRama(nombre_cod) {
     mostrarInfoGrupo(nombre_cod);
+    seleccionarTabRama();
     var raw;
     $.each(datos, function (index, grupo) {
         if (nombre_cod == (grupo.codigo)) {
@@ -46,6 +48,7 @@ function mostrarRama(nombre_cod) {
     });
 }
 function mostrarInfoGrupo(nombre_cod) {
+    var posicion;
     $('#panelInfo').show();
     $.each(datos, function (index, grupo) {
         if (nombre_cod == (grupo.codigo)) {
@@ -77,10 +80,10 @@ function mostrarInfoGrupo(nombre_cod) {
             $("#boddy2").append("<dt>Religion:</dt>");
             $("#boddy2").append($("<dd></dd>").text(grupo.religion));
 
-
+            centrarMapa(grupo.ubicacion.latitud,grupo.ubicacion.longitud);
         }
-
     });
+    return posicion;
 }
 
 function mostrarInfoRama(num) {

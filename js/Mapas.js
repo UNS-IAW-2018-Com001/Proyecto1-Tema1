@@ -25,6 +25,10 @@ function crearMapa() {
     //directionsDisplay.setPanel(document.getElementById('right-panel'));
     crearFotos();
 }
+function centrarMapa(lat,long){
+    pos= new google.maps.LatLng(lat, long);
+    map.setCenter(pos);
+}
 function cargarPosicionActual() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function (position) {
