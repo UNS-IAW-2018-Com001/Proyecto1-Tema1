@@ -110,17 +110,14 @@ function mostrarInfoRama(num) {
     });
 }
 
-/*
-function obtenerLocalizacionGrupos() {
-    var retorno = new Array();
-        var grupoI = new Array();
-        grupoI.push("UNS");
-        grupoI.push(-38.701839);
-        grupoI.push(-62.2713265);
-        retorno.push(grupoI);  
-    return retorno;
-}
-*/
+function seleccionarTabGrupo() {
+                $("#id_rama").removeClass("active");
+                $("#id_grupo").addClass("active");
+            }
+            function seleccionarTabRama() {
+                $("#id_grupo").removeClass("active");
+                $("#id_rama").addClass("active");
+            }
 
 function obtenerLocalizacionGrupos() {
     var retorno = new Array();
