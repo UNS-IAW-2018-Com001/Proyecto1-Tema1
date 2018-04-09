@@ -214,11 +214,8 @@
             // armarRuta();
         }
         function obtenerLugares() {
-            lugares = [
-                ['UNS', -38.701839, -62.2713265],
-                ['Comedor', -38.702386, -62.269895],
-                ['dcic', -38.8807326, -62.0677682]
-            ];
+            lugares = obtenerLocalizacionGrupos();
+            
         }
         function crearMapa() {
             posicionActual = new google.maps.LatLng(lugares[0][1], lugares[0][2])

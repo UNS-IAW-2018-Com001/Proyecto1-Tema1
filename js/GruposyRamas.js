@@ -4,13 +4,14 @@ var pizzas;
 $(function () {
     $.get("./data/grupo.json", function (data) {
        mostrarGrupo(data.Asociacion.grupos);
-
+       initMap();
     });
 });
 
 function mostrarGrupo(data) {
     $("#gruposyRamas").empty();
     datos = data;
+     
     $.each(data, function (index, grupo) {
         agregarGrupo(grupo);
     });
@@ -103,4 +104,28 @@ function mostrarInfoRama(num) {
 
         });
     });
+}
+
+/*
+function obtenerLocalizacionGrupos() {
+    var retorno = new Array();
+        var grupoI = new Array();
+        grupoI.push("UNS");
+        grupoI.push(-38.701839);
+        grupoI.push(-62.2713265);
+        retorno.push(grupoI);  
+    return retorno;
+}
+*/
+
+function obtenerLocalizacionGrupos() {
+    var retorno = new Array();
+     $.each(datos, function (index, grupo) {
+        var grupoI = new Array();        
+        grupoI.push(grupo.nombre);
+        grupoI.push(grupo.ubicacion.latitud);
+        grupoI.push(grupo.ubicacion.longitud);
+        retorno.push(grupoI);  
+   });
+    return retorno;
 }
