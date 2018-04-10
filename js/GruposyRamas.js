@@ -187,7 +187,10 @@ function obtenerImagenesGrupo(nombre_cod) {
         if (nombre_cod == (grupo.codigo)) {
             $.each(grupo.ramas, function (index, rama) {
                 $.each(rama.fotos, function (index, foto){
-                    retorno.push(foto);
+                    var ArregloFoto=new Array();
+                    ArregloFoto.push(rama.nombre);
+                    ArregloFoto.push(foto);
+                    retorno.push(ArregloFoto);
                 });
             });
         }
@@ -199,7 +202,12 @@ function obtenerImagenesRama(num) {
     $.each(datos, function (index, grupo) {
         $.each(grupo.ramas, function (index, rama) {
             if (num == rama.numeracion) {
-                retorno=rama.fotos;
+                $.each(rama.fotos, function (index, foto){
+                    var ArregloFoto=new Array();
+                    ArregloFoto.push(rama.nombre);
+                    ArregloFoto.push(foto);
+                    retorno.push(ArregloFoto);
+                });
             }
         });
         
