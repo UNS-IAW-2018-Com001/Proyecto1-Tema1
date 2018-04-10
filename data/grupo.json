@@ -58,7 +58,7 @@
 								"horario":"12:15"
 							}
 						],
-						"fotos":["img1.jpg","img2.jpg"],
+						"fotos":["manada234_0.jpg","manada234_1.jpg","manada234_2.jpg","manada234_3.jpg","manada234_4.jpg"],
 						"tipo":"Rama Mixta"
 					},
                       {
@@ -87,11 +87,11 @@
 						"fechaInscripcion_inicio":"1/03/2018",
 						"fechaIscripcion_fin":"1/05/2018",
 						"comentarios":[],
-						"fotos":["img5.jpg","img6.jpg"],
+						"fotos":["caminantes324_1.jpg","caminantes324_0.jpg"],
 						"tipo":"Rama Mixta"
 					},
                     {
-						"nombre":"Comunidad Rover HuacheluHuaun",
+						"nombre":"Comunidad Rover Huechelu HuahuM",
                                                 "numeracion":4,
 						"edad_minima":17,
 						"edad_maxima":21,
@@ -141,7 +141,7 @@
 								"horario":"02:15"
 							}
 						],
-						"fotos":["img5.jpg","img2.jpg"],
+						"fotos":["manada1035_2.jpg","manada1035_1.jpg","manada1035_0.jpg"],
 						"tipo":"Rama Mixta"
 					},
                       {
@@ -159,7 +159,7 @@
 								"horario":"02:15"
 							}
 						],
-						"fotos":["img1.jpg","img6.jpg"],
+						"fotos":["unidad1035_0.jpg","unidad1035_1.jpg"],
 						"tipo":"Rama Mixta"
 					},
 					{
@@ -170,7 +170,7 @@
 						"fechaInscripcion_inicio":"7/04/2018",
 						"fechaIscripcion_fin":"28/04/2018",
 						"comentarios":[],
-						"fotos":["img1.jpg"],
+						"fotos":["caminantes1035_0.jpg","caminantes1035_1.jpg"],
 						"tipo":"Rama Mixta"
 					},
                     {
@@ -181,7 +181,7 @@
 						"fechaInscripcion_inicio":"7/04/2018",
 						"fechaIscripcion_fin":"28/04/2018",
 						"comentarios":[],
-						"fotos":[],
+						"fotos":["rover1035_0.jpg","rover1035_1.jpg"],
 						"tipo":"Rama Mixta"
 					}
 				]
