@@ -43,7 +43,7 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li class="dropdown">
+                        <li class="btn-group">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Estilos <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="#" onclick="cambiarArchivoCss('css/Formato1.css')">Estilo 1</a></li>
@@ -84,21 +84,26 @@
                             <div class="btn-group">
                                 <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle">Asociación <span class="caret"></span></button>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Argentina</a></li>
                                 </ul>
                             </div>
                             <div class="btn-group">
                                 <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle">Edad mínima <span class="caret"></span></button>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">8 años</a></li>
+                                    <li><a href="#">10 años</a></li>
+                                    <li><a href="#">12 años</a></li>
+                                    <li><a href="#">14 años</a></li>
+                                    <li><a href="#">16 años</a></li>
                                 </ul>
                             </div>
                             <div class="btn-group">
                                 <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle">Edad máxima <span class="caret"></span></button>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">13 años</a></li>
+                                    <li><a href="#">14 años</a></li>
+                                    <li><a href="#">16 años</a></li>
+                                    
                                 </ul>
                             </div> <div class="btn-group">
                                 <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle">Rama <span class="caret"></span></button>
@@ -146,94 +151,67 @@
                         </dl>
 
 
-                    <div class="panel panel-info" id="panelImagenes">
-                        <div class="panel-heading" id="panelimagenesHead">
-                            <center><h3 class="panel-title">Imágenes</h3></center>
-                        </div>
-                        <div class="panel-body" id="bodyimagenes">
-                            <div class="container">
-                                <div class='row'>
-                                    <div class='col-md-12'>
-                                        <div class="carousel slide media-carousel" id="media">
-                                            <div class="carousel-inner" id="GaleriadeFotos">
-                                            </div>
-                                            <a data-slide="prev" href="#media" class="left carousel-control">‹</a>
-                                            <a data-slide="next" href="#media" class="right carousel-control">›</a>
-                                        </div>                        
+                        <div class="panel panel-info" id="panelImagenes">
+                            <div class="panel-heading" id="panelimagenesHead">
+                                <center><h3 class="panel-title">Imágenes</h3></center>
+                            </div>
+                            <div class="panel-body" id="bodyimagenes">
+                                <div class="container">
+                                    <div class='row'>
+                                        <div class='col-md-12'>
+                                            <div class="carousel slide media-carousel" id="media">
+                                                <div class="carousel-inner" id="GaleriadeFotos">
+                                                </div>
+                                                <a data-slide="prev" href="#media" class="left carousel-control">‹</a>
+                                                <a data-slide="next" href="#media" class="right carousel-control">›</a>
+                                            </div>                        
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                     </div>
-                    
-                    </div>
+
+                    <!-- Contenedor de comentarios -->
+                    <div class="comments-container">
+                        <h2 id="Titulo_Comentario"></h2>
+                        <ul id="comments-list" class="comments-list">
+
+                        </ul>
+                    </div>   
                 </div>
+
+
+                <div class="row" id="margen"><h1>   </h1></div>
+
+                <div id="right-panel"></div>
+
+
+                <script async defer
+                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByOCB3dfHze0DkCseu2AB5xXw3lWpM64E&callback=initMap">
+                </script>
+
+
+
             </div>
-            <div>
 
-            </div> 
-
-            <div class="row" id="margen"><h1>   </h1></div>
-
-            <div id="right-panel"></div>
-
-
-            <script async defer
-                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByOCB3dfHze0DkCseu2AB5xXw3lWpM64E&callback=initMap">
+            <script>
+                $(document).ready(function () {
+                    cargarArchivoCSS();
+                });
             </script>
 
-            <div id="fb-root"></div>
-            <script>(function (d, s, id) {
-                    var js, fjs = d.getElementsByTagName(s)[0];
-                    if (d.getElementById(id))
-                        return;
-                    js = d.createElement(s);
-                    js.id = id;
-                    js.src = 'https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.12';
-                    fjs.parentNode.insertBefore(js, fjs);
-                }
-                (document, 'script', 'facebook-jssdk'));</script>
-
-
-		<script>/*
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="fb-comments" 
-                         data-href="http://localhost:8383/Proyecto1-Tema1/index.html"  
-                         data-width="100%" data-numposts="5"></div>
-                </div>
-                <div class="col-md-8">
-                    <div class="g-comments"
-                         data-href="http://localhost:8383/Proyecto1-Tema1/index.html"
-
-                         data-first_party_property="BLOGGER"></div>
-                </div>
-            </div>
-
-            <div>
-                <!-- begin wwww.htmlcommentbox.com -->
-
-            </div>
-		*/</script>
-
-        </div>
-
-        <script>
-            $(document).ready(function () {
-                cargarArchivoCSS();
-            });
-        </script>
-
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-        <script src="https://apis.google.com/js/plusone.js"></script>
-        <script src="lightbox/js/lightbox.min.js"></script>
-        <script>
-            lightbox.option({
-                'albumLabel': "Imagen %1 de %2"
-            })
-        </script>
+            <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+            <!-- Include all compiled plugins (below), or include individual files as needed -->
+            <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+            <script src="https://apis.google.com/js/plusone.js"></script>
+            <script src="lightbox/js/lightbox.min.js"></script>
+            <script>
+                lightbox.option({
+                    'albumLabel': "Imagen %1 de %2"
+                })
+            </script>
     </body>
 </html>

@@ -81,9 +81,47 @@ function mostrarInfoGrupo(nombre_cod) {
 
             centrarMapa(grupo.ubicacion.latitud,grupo.ubicacion.longitud);
             crearGaleria(obtenerImagenesGrupo(nombre_cod));
+            
+            $("#Titulo_Comentario").empty();
+            $("#Titulo_Comentario").append("Comentarios del grupo:");
+             
+            $("#comments-list").empty();
+            
+             if(grupo.comentarios.length==0){
+                    $("#Titulo_Comentario").append($("<h3></h3>").text("Todavia no hay comentarios. Se el primero en comentar!"));
+                }
+            //Cargamos comentarios de cada uno de los grupos
+            $.each(grupo.comentarios, function (index, comentario) {
+                mostrarComentarios(comentario);
+
+            });
+            
+            
         }
     });
     
+}
+
+function mostrarComentarios(comentario) {
+    $("#comments-list").append("<li>" +
+            "<div class=\"comment-main-level\">" +
+            "<div class=\"comment-avatar\"><img src=\"images/avatar.png\" alt=\"\"></div>" +
+            "<div class=\"comment-box\">" +
+            "<div class=\"comment-head\">" +
+            "<h6 class=\"comment-name \">" +
+            comentario.id
+            + "</h6>"
+            + "<span id=\"span_Coment\">" + comentario.fecha + "</span>"
+            + "<span id=\"span_Coment\">" + comentario.horario + "</span>"
+            + "<i class=\"fa fa-reply\"></i>"
+            + "<i class=\"fa fa-heart\"></i>"
+            + "</div>"
+            + "<div class=\"comment-content\">"
+            + comentario.texto
+            + "</div>"
+            + "</div>"
+            + "</div>"
+            + "</li>");
 }
 
 function mostrarInfoRama(num) {
@@ -104,6 +142,18 @@ function mostrarInfoRama(num) {
                 $("#boddy2").append("<dt>Tipo:</dt>");
                 $("#boddy2").append($("<dd></dd>").text(rama.tipo));
                 crearGaleria(obtenerImagenesRama(num));
+                
+                $("#Titulo_Comentario").empty();
+                $("#Titulo_Comentario").append("Comentarios de la rama:");
+                $("#comments-list").empty();
+                
+                if(rama.comentarios.length==0){
+                    $("#Titulo_Comentario").append($("<h3></h3>").text("Todavia no hay comentarios. Se el primero en comentar!"));
+                }
+                //Cargamos comentarios de cada uno de las ramas
+                $.each(rama.comentarios, function (index, comentario) {
+                    mostrarComentarios(comentario);
+                });
             }
 
         });

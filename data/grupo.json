@@ -15,7 +15,15 @@
 				"sitio_web":"",
 				"telefono":0,
 				"email":"gruporosales@gmail.com",
-				"comentarios": [],
+				"comentarios": [
+                                        {
+							"id":"Organizador1",
+							"texto":"Sean bienvenidos a realiar cualquier consulta cuando lo necesiten.",
+							"fecha":"1/1/2016",
+							"horario":"14:00"
+					}
+                
+                                ],
 				"religion":"Religión Heterogenea",
 				"ubicacion":
 				{
@@ -39,9 +47,15 @@
 						"comentarios":[
 							{
 								"id":"pepe",
-								"Texto":"Que lindo lugar!",
-								"Fecha":"27/03/2018",
-								"Horario":"02:15"
+								"texto":"Que lindo lugar!",
+								"fecha":"27/03/2018",
+								"horario":"02:15"
+							},
+                                                        {
+								"id":"Carlos",
+								"texto":"Muy buenas actividades, totalmente recomendable",
+								"fecha":"24/03/2017",
+								"horario":"12:15"
 							}
 						],
 						"fotos":["img1.jpg","img2.jpg"],
@@ -57,9 +71,9 @@
 						"comentarios":[
 							{
 								"id":"pepe",
-								"Texto":"Que lindo lugar!",
-								"Fecha":"27/03/2018",
-								"Horario":"02:15"
+								"texto":"Que lindo lugar!",
+								"fecha":"27/03/2018",
+								"horario":"02:15"
 							}
 						],
 						"fotos":["img3.jpg","img4.jpg"],
@@ -122,9 +136,9 @@
 						"comentarios":[
 							{
 								"id":"pepe",
-								"Texto":"Que lindo lugar!",
-								"Fecha":"27/03/2018",
-								"Horario":"02:15"
+								"texto":"Que lindo lugar!",
+								"fecha":"27/03/2018",
+								"horario":"02:15"
 							}
 						],
 						"fotos":["img5.jpg","img2.jpg"],
@@ -140,9 +154,9 @@
 						"comentarios":[
 							{
 								"id":"pepe",
-								"Texto":"Que lindo lugar!",
-								"Fecha":"27/03/2018",
-								"Horario":"02:15"
+								"texto":"Que lindo lugar!",
+								"fecha":"27/03/2018",
+								"horario":"02:15"
 							}
 						],
 						"fotos":["img1.jpg","img6.jpg"],
@@ -183,11 +197,18 @@
 				"email":"GSRE@gmail.com",
 				"comentarios": [
 					{
-								"id":"rosario_tucoloradita22",
+								"id":"rosario_colo22",
 								"texto":"Muy copa2!",
 								"fecha":"28/03/2018",
 								"horario":"12:34"
+					},
+                                        {
+								"id":"made_juampi",
+								"texto":"Juan pablo espera ansioso hasta el proximo sabado",
+								"fecha":"10/04/2018",
+								"horario":"15:34"
 					}
+                                        
 				],
 				"religion":"catolica",
 				"ubicacion":
