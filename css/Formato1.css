@@ -38,6 +38,9 @@ panel{
 #margen{
   height:100 px;
 }
+#margen1{
+  height:300 px;
+}
 #gruposyRamas{
     background-color: #FFFFFF; 
      overflow-y:scroll;
@@ -159,4 +162,14 @@ test{
 }
 #media{
 width:90%;
+}
+#filtros{
+    box-shadow:none;
+}
+#map{
+	
+}
+#panelTOTAL{
+    margin-top: 60px;
+    padding-top: 0px;
 }
