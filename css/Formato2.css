@@ -8,9 +8,16 @@ body {
 }
 
 #panelTOTAL{
-    padding:1em;
-    background-color: #f5e79e;
+   background-color: #f5e79e;
+   padding-right:1em;
 }
+ #panelIzquierdo{
+     float:right;
+ }
+ #panelDerecho{
+     float:left;
+ }
+
 
 #filtros{
     height: 100%; 
@@ -18,9 +25,22 @@ body {
     background-color: #f5e79e;
     color:#222222;
     float:bottom;
+    border-width:0px;
+    box-shadow:none;
 }
+ #map {
+   width: 100%;
+   height: 400px;
+	background-color: #a94442; 
+ }
 #DivGruposyRamas{
     float: top;
+}
+#id_rama{
+	border-width:1px;
+}
+#id_grupo{
+	border-width:1px;
 }
 #dropdownMenu1{
     padding-top:25px;
@@ -30,17 +50,6 @@ body {
     padding: 1em;
 }
 
- #map {
-   width: 100%;
-   height: 400px;
-   background-color: grey;
- }
- #panelIzquierdo{
-     float:right;
- }
- #panelDerecho{
-     float:left;
- }
  #margen{
      background-color: #a94442;
  }
@@ -52,74 +61,30 @@ body {
 #PanelInformacion{
     color:black;
     width: 100%;
-    display: flex;
-    align-items: center;
-}
-#panelInfo{
-    width: 80%;
-}
-#media{
-    width: 60%;
-}
- /*
-#Comentarios{
-  width:100%;
-  padding-left: 5em;
-  padding-right: 5em;
-}
-panel{
-  background-color: #003557 
-}
-#margen{
-  height:100 px;
-}
-#gruposyRamas{
-    background-color: #FFFFFF; 
-   height: 200px;
-  overflow-y:scroll;
-}
-h2{
-  color:white;
-}
-#panelInfo{
-  background-color:#003557;
 }
 #panelImagenes{
-  background-color:#003557;
+	border-width:1px;
+	border-color:#000000;
 }
-#bodyinfo{
-  height:300;
-  overflow-y:scroll;
- 
-
+#panelimagenesHead{
+    background-color: #a94442;
+    border-color: a94442;
+    color:white;
 }
-#info{
-    column-count: 3;
-    -webkit-column-count: 3;
-    -moz-column-count: 3;
-    -o-column-count: 3;;
-}  
-
-
-#filtroTag{
-  color: black;
+#bodyimagenes{
+	color:white;
+	background-color: #AAAAAA;
 }
-article img{
-  max-height:180px;
+#panelInfo{
+    width: 100%;
 }
-article p,footer p{
-  text-align:center;
+#media{
+    width: 100%;
 }
-#GaleriadeFotos{
-  height:200px;
-  width:100%;
+.panel-info{
+	border-width:0px;
+	margin:20px;
 }
-test{
-    color:black;
-}
-
-
-
 /* carousel */
 .media-carousel 
 {
