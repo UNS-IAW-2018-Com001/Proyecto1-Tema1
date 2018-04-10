@@ -171,6 +171,8 @@ width:90%;
 #panelTOTAL{
     margin-top: 60px;
     padding-top: 0px;
+    border-width: 0px;
+    box-shadow: none;
 }
 
 
