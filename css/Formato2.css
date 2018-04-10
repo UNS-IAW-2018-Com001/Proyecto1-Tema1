@@ -7,7 +7,6 @@ body {
   background-color: #a94442; 
 }
 
-
 #panelTOTAL{
     padding:1em;
     background-color: #f5e79e;
@@ -42,6 +41,21 @@ body {
  #panelDerecho{
      float:left;
  }
+ 
+#PanelInformacionHead{
+    background-color: #a94442;
+    border-color: a94442;
+    color:white;
+}
+#PanelInformacion{
+    color:black;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+#panelInfo{
+    width: 80%;
+}
  /*
 #Comentarios{
   width:100%;
