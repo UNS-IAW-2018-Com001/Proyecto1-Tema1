@@ -103,7 +103,8 @@ function mostrarInfoRama(num) {
                 $("#boddy2").append($("<dd></dd>").text(rama.fechaIscripcion_fin));
                 $("#boddy2").append("<dt>Tipo:</dt>");
                 $("#boddy2").append($("<dd></dd>").text(rama.tipo));
-          }
+                crearGaleria(obtenerImagenesRama(num));
+            }
 
         });
     });
@@ -140,6 +141,18 @@ function obtenerImagenesGrupo(nombre_cod) {
                 });
             });
         }
+    });
+    return retorno;
+}
+function obtenerImagenesRama(num) {
+    var retorno = new Array();
+    $.each(datos, function (index, grupo) {
+        $.each(grupo.ramas, function (index, rama) {
+            if (num == rama.numeracion) {
+                retorno=rama.fotos;
+            }
+        });
+        
     });
     return retorno;
 }
