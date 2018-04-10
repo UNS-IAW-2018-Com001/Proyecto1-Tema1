@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title>Bootstrap 101 Template</title>
+        <title>Proyecto1-Tema1</title>
 
         <!-- Bootstrap -->
         <!----Agrege este comentario-->
@@ -174,15 +174,37 @@
                             </div>
                         </div>
 
+
+
+
+                        <div class="panel-body" id="panel-nuevoComentario">      
+
+                            <div class="form-group ">
+                                <label for="Nombre">Nombre:</label>
+                                <input type="userName" class="form-control" id="Nombre" aria-describedby="emailHelp" cols="30">
+                                <small id="ayuda" class="form-text text-muted">Este será el nombre que desea que aparesca junto a el comentario.</small>
+                            </div>
+                            <div class="form-group ">
+                                <label for="comment">Comentario:</label>
+                                <textarea class="form-control" rows="3" id="coment" cols="30"></textarea>
+                            </div>
+                            <div class="form-group col-xs-8">
+                                <button type="submit" class="btn btn-primary" onclick="enviarComentario()">Enviar comentario</button>
+                            </div >
+
+                        </div>
+
+                        <!-- Contenedor de comentarios -->
+                        <div class="comments-container" id="ComentarioConteiner">
+                            <h2 id="Titulo_Comentario"></h2>
+                            <button type="mostrar" class="btn btn-primary" onclick="visualizarPanel_NuevoCometario()">Añadir comentario</button>
+
+                            <ul id="comments-list" class="comments-list">
+
+                            </ul>
+                        </div>
+
                     </div>
-
-                    <!-- Contenedor de comentarios -->
-                    <div class="comments-container">
-                        <h2 id="Titulo_Comentario"></h2>
-                        <ul id="comments-list" class="comments-list">
-
-                        </ul>
-                    </div>   
                 </div>
 
 
@@ -201,6 +223,7 @@
         <script>
             $(document).ready(function () {
                 cargarArchivoCSS();
+                inicializarAlmacenamiento_local();
             });
         </script>
 

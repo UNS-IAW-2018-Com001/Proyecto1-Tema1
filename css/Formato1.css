@@ -20,6 +20,10 @@ body {
     padding: 1em;
 }
 
+#panelIzquierdo{
+    padding-left: 3em;
+}
+
  #map {
    width: 100%;
    height: 400px;
@@ -30,6 +34,10 @@ body {
   padding-left: 5em;
   padding-right: 5em;
 }
+#ComentarioConteiner{
+    padding-top: 0px;
+}
+
  #margen{
      background-color: #003557;
  }
@@ -71,9 +79,6 @@ height: 150px
 #bodyimagenes{
 background-color: rgba(25, 34, 36, 0.55);
 
-}
-#bodyinfo{
-  height:300px;
 }
 #info{
     column-count: 3;

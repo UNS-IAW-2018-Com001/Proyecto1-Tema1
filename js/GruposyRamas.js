@@ -1,9 +1,11 @@
 var datos;
-var pizzas;
+var codigo;
+var enGrupo;
 
 $(function () {
     $.get("./data/grupo.json", function (data) {
        mostrarGrupo(data.Asociacion.grupos);
+       $('#panel-nuevoComentario').hide();
        initMap();
     });
 });
@@ -48,6 +50,8 @@ function mostrarRama(nombre_cod) {
     });
 }
 function mostrarInfoGrupo(nombre_cod) {
+     codigo = nombre_cod;
+    enGrupo = true;
     $('#panelInfo').show();
     $.each(datos, function (index, grupo) {
         if (nombre_cod == (grupo.codigo)) {
@@ -95,7 +99,7 @@ function mostrarInfoGrupo(nombre_cod) {
                 mostrarComentarios(comentario);
 
             });
-            
+            mostrar_comentarios_Locales();
             
         }
     });
@@ -125,6 +129,8 @@ function mostrarComentarios(comentario) {
 }
 
 function mostrarInfoRama(num) {
+     codigo = num;
+    enGrupo = false;
     $.each(datos, function (index, grupo) {
         $.each(grupo.ramas, function (index, rama) {
             if (num == rama.numeracion) {
@@ -154,6 +160,7 @@ function mostrarInfoRama(num) {
                 $.each(rama.comentarios, function (index, comentario) {
                     mostrarComentarios(comentario);
                 });
+                mostrar_comentarios_Locales();
             }
 
         });
@@ -213,4 +220,108 @@ function obtenerImagenesRama(num) {
         
     });
     return retorno;
+}
+
+
+/* Funciones relacionadas a la carga de comentarios*/
+
+
+function enviarComentario(){
+    
+    $('#panel-nuevoComentario').hide();
+    var nick = $("#Nombre").val();
+    var comentario = $("#coment").val();
+
+    var f = new Date();
+    var fecha = f.getDate() + "/" + (f.getMonth() + 1) + "/" + f.getFullYear();
+    var hora = f.getHours() + ":" + f.getMinutes();
+    guardarComentario(nick, comentario, fecha, hora);
+    mostrarComentariosAgregado(nick, comentario, fecha, hora);
+}
+
+
+function mostrarComentariosAgregado(nick, comentario, fecha, hora) {
+
+    $("#comments-list").prepend("<li>" +
+            "<div class=\"comment-main-level\">" +
+            "<div class=\"comment-avatar\"><img src=\"images/avatar.png\" alt=\"\"></div>" +
+            "<div class=\"comment-box\">" +
+            "<div class=\"comment-head\">" +
+            "<h6 class=\"comment-name \">" +
+            nick
+            + "</h6>"
+            + "<span>" + fecha + "</span>"
+            + "<span>" + hora + "</span>"
+            + "<i class=\"fa fa-reply\"></i>"
+            + "<i class=\"fa fa-heart\"></i>"
+            + "</div>"
+            + "<div class=\"comment-content\">"
+            + comentario
+            + "</div>"
+            + "</div>"
+            + "</div>"
+            + "</li>");
+
+
+}
+
+function inicializarAlmacenamiento_local() {
+
+    var g = localStorage.getItem('grupos');
+    if (g == null) {
+        var arreglo1 = {
+            'screens': [],
+            'state': true
+        };
+        localStorage.setItem('grupos', JSON.stringify(arreglo1));
+    }
+
+    g = localStorage.getItem('ramas');
+    if (g == null) {
+
+        var arreglo2 = {
+            'screens': [],
+            'state': true
+        };
+        localStorage.setItem('ramas', JSON.stringify(arreglo2));
+    }
+
+
+}
+
+function guardarComentario(nick, comentario, fecha, hora) {
+    var item_Name;
+    if (enGrupo)
+        item_Name = 'grupos';
+    else
+        item_Name = 'ramas';
+    var nuevosComentarios = JSON.parse(localStorage.getItem(item_Name));
+    ;
+    if (nuevosComentarios != null) {
+        nuevosComentarios.screens.push({'nombre': nick, 'codigo': codigo, 'comentario': comentario, 'fecha': fecha, 'hora': hora});
+        localStorage.setItem(item_Name, JSON.stringify(nuevosComentarios));      
+        
+    }
+}
+
+function mostrar_comentarios_Locales() {
+    var item;
+    if (enGrupo)
+        item = 'grupos';
+    else
+        item = 'ramas';
+    var g = localStorage.getItem(item);
+    if (g != null) {
+        var restoredSession = JSON.parse(g);
+        $.each(restoredSession.screens, function (index, comentarios) {
+            if (codigo == comentarios.codigo) {
+                mostrarComentariosAgregado(comentarios.nombre, comentarios.comentario, comentarios.fecha, comentarios.hora);
+            }
+        });
+    }
+}
+
+
+function visualizarPanel_NuevoCometario(){
+      $('#panel-nuevoComentario').show();
 }
