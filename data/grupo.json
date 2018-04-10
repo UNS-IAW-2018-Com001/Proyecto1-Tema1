@@ -44,7 +44,7 @@
 								"Horario":"02:15"
 							}
 						],
-						"fotos":[],
+						"fotos":["img1.jpg","img2.jpg"],
 						"tipo":"Rama Mixta"
 					},
                       {
@@ -62,7 +62,7 @@
 								"Horario":"02:15"
 							}
 						],
-						"fotos":[],
+						"fotos":["img3.jpg","img4.jpg"],
 						"tipo":"Rama Mixta"
 					},
 					{
@@ -73,9 +73,9 @@
 						"fechaInscripcion_inicio":"1/03/2018",
 						"fechaIscripcion_fin":"1/05/2018",
 						"comentarios":[],
-						"fotos":[],
+						"fotos":["img5.jpg","img6.jpg"],
 						"tipo":"Rama Mixta"
-					}
+					},
                     {
 						"nombre":"Comunidad Rover HuacheluHuaun",
                                                 "numeracion":2,
@@ -127,7 +127,7 @@
 								"Horario":"02:15"
 							}
 						],
-						"fotos":[],
+						"fotos":["img5.jpg","img2.jpg"],
 						"tipo":"Rama Mixta"
 					},
                       {
@@ -145,7 +145,7 @@
 								"Horario":"02:15"
 							}
 						],
-						"fotos":[],
+						"fotos":["img1.jpg","img6.jpg"],
 						"tipo":"Rama Mixta"
 					},
 					{
@@ -156,9 +156,9 @@
 						"fechaInscripcion_inicio":"7/04/2018",
 						"fechaIscripcion_fin":"28/04/2018",
 						"comentarios":[],
-						"fotos":[],
+						"fotos":["img1.jpg"],
 						"tipo":"Rama Mixta"
-					}
+					},
                     {
 						"nombre":"Comunidad Rover Jorge Graiff",
                                                 "numeracion":2,
@@ -210,12 +210,7 @@
 						"fechaInscripcion_inicio":"01/04",
 						"fechaIscripcion_fin":"25/09",
 						"comentarios":[],
-						"fotos":
-						[
-							{
-								"uri":"https://i.ytimg.com/vi/Q52tJJST1ho/hqdefault.jpg"
-							}
-						],
+						"fotos":["img1.jpg","img2.jpg"],
 						"tipo":"mixta"
 					}
 				]

@@ -23,7 +23,7 @@ function crearMapa() {
     });
     //directionsDisplay.setMap(map);
     //directionsDisplay.setPanel(document.getElementById('right-panel'));
-    crearFotos();
+    
 }
 function centrarMapa(lat,long){
     pos= new google.maps.LatLng(lat, long);

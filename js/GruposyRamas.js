@@ -48,7 +48,6 @@ function mostrarRama(nombre_cod) {
     });
 }
 function mostrarInfoGrupo(nombre_cod) {
-    var posicion;
     $('#panelInfo').show();
     $.each(datos, function (index, grupo) {
         if (nombre_cod == (grupo.codigo)) {
@@ -81,9 +80,10 @@ function mostrarInfoGrupo(nombre_cod) {
             $("#boddy2").append($("<dd></dd>").text(grupo.religion));
 
             centrarMapa(grupo.ubicacion.latitud,grupo.ubicacion.longitud);
+            crearGaleria(obtenerImagenes(nombre_cod));
         }
     });
-    return posicion;
+    
 }
 
 function mostrarInfoRama(num) {
@@ -128,5 +128,18 @@ function obtenerLocalizacionGrupos() {
         grupoI.push(grupo.codigo);
         retorno.push(grupoI);  
    });
+    return retorno;
+}
+function obtenerImagenes(nombre_cod) {
+    var retorno = new Array();
+    $.each(datos, function (index, grupo) {
+        if (nombre_cod == (grupo.codigo)) {
+            $.each(grupo.ramas, function (index, rama) {
+                $.each(rama.fotos, function (index, foto){
+                    retorno.push(foto);
+                });
+            });
+        }
+    });
     return retorno;
 }
