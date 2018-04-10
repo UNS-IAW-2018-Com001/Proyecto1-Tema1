@@ -58,7 +58,7 @@
 								"horario":"12:15"
 							}
 						],
-						"fotos":["manada234_0.jpg","manada234_1.jpg","manada234_2.jpg","manada234_3.jpg","manada234_4.jpg"],
+						"fotos":["img1.jpg","img2.jpg"],
 						"tipo":"Rama Mixta"
 					},
                       {
@@ -141,7 +141,7 @@
 								"horario":"02:15"
 							}
 						],
-						"fotos":["manada1035_2.jpg","manada1035_0.jpg","manada1035_1.jpg"],
+						"fotos":["img5.jpg","img2.jpg"],
 						"tipo":"Rama Mixta"
 					},
                       {
@@ -159,7 +159,7 @@
 								"horario":"02:15"
 							}
 						],
-						"fotos":["unidad1035_0.jpg","img1.jpg","img6.jpg"],
+						"fotos":["img1.jpg","img6.jpg"],
 						"tipo":"Rama Mixta"
 					},
 					{
