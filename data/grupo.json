@@ -1,13 +1,13 @@
 {
 	"Asociacion":
 	{
-		"nombre": "Scouts de Argentina Asociacion Civil",
+		"nombre": "Scout de Argentina Asociacion Civil (SAAC)",
 		"año_de_fundacion": "1960",
 		"dia_de_actividad": [ "sabado"],
 		"grupos":
 		[
 			{
-				"nombre":"Coronel de Marina Leonardo Rosales",
+				"nombre":"Coronel Rosales",
 				"codigo":234,
 				"fecha_Creacion":"25/10/1986",
 				"horario_Inicio":"14:00",
@@ -16,26 +16,26 @@
 				"telefono":0,
 				"email":"gruporosales@gmail.com",
 				"comentarios": [],
-				"religion":"heterogenea",
+				"religion":"Religión Heterogenea",
 				"ubicacion":
 				{
-					"calle":"salta",
+					"calle":"Salta",
 					"numero":262,
 					"ciudad":"Punta Alta",
 					"provincia":"Buenos Aires",
 					"pais":"Argentina",
-					"latitud":-38.8693346,
-					"longitud": -62.0639021				
+					"latitud":-38.8692677,
+					"longitud": -62.06180619999998				
 				},
 				"ramas":
-				[
+				[	
 					{
-						"nombre":"Unidad Traulen",
+						"nombre":"Manada Mowgli",
                                                 "numeracion":1,
-						"edad_minima":11,
-						"edad_maxima":13,
-						"fechaInscripcion_inicio":"01/04",
-						"fechaIscripcion_fin":"25/05",
+						"edad_minima":6,
+						"edad_maxima":11,
+						"fechaInscripcion_inicio":"1/03/2018",
+						"fechaIscripcion_fin":"1/05/2018",
 						"comentarios":[
 							{
 								"id":"pepe",
@@ -45,18 +45,130 @@
 							}
 						],
 						"fotos":[],
-						"tipo":"mixta"
+						"tipo":"Rama Mixta"
+					},
+                      {
+						"nombre":"Unidad Traulen",
+                                                "numeracion":1,
+						"edad_minima":11,
+						"edad_maxima":13,
+						"fechaInscripcion_inicio":"1/03/2018",
+						"fechaIscripcion_fin":"1/05/2018",
+						"comentarios":[
+							{
+								"id":"pepe",
+								"Texto":"Que lindo lugar!",
+								"Fecha":"27/03/2018",
+								"Horario":"02:15"
+							}
+						],
+						"fotos":[],
+						"tipo":"Rama Mixta"
 					},
 					{
-						"nombre":"Caminantes Penihuen",
+						"nombre":"Comunidad Caminantes Penihuen",
                                                 "numeracion":2,
 						"edad_minima":14,
 						"edad_maxima":17,
-						"fechaInscripcion_inicio":"01/04",
-						"fechaIscripcion_fin":"25/09",
+						"fechaInscripcion_inicio":"1/03/2018",
+						"fechaIscripcion_fin":"1/05/2018",
 						"comentarios":[],
 						"fotos":[],
-						"tipo":"mixta"
+						"tipo":"Rama Mixta"
+					}
+                    {
+						"nombre":"Comunidad Rover HuacheluHuaun",
+                                                "numeracion":2,
+						"edad_minima":17,
+						"edad_maxima":21,
+						"fechaInscripcion_inicio":"1/03/2018",
+						"fechaIscripcion_fin":"1/05/2018",
+						"comentarios":[],
+						"fotos":[],
+						"tipo":"Rama Mixta"
+					}
+				]
+			},
+			{
+				"nombre":"San Antonio María Zaccaría",
+				"codigo":1035,
+				"fecha_Creacion":"24/09/2005",
+				"horario_Inicio":"14:30:00",
+				"horario_fin":"19:00:00",
+				"sitio_web":"https://www.facebook.com/samz1035/",
+				"telefono":0,
+				"email":"",
+				"comentarios": [],
+				"religion":"Católica",
+				"ubicacion":
+				{
+					"calle":"Nicaragua",
+					"numero":2950,
+					"ciudad":"Bahía Blanca",
+					"provincia":"Buenos Aires",
+					"pais":"Argentina",
+					"latitud":-38.6904926,
+					"longitud": -62.2938188			
+				},
+				"ramas":
+				[	
+					{
+						"nombre":"Manada Peña de la Paz",
+                                                "numeracion":1,
+						"edad_minima":7,
+						"edad_maxima":11,
+						"fechaInscripcion_inicio":"7/04/2018",
+						"fechaIscripcion_fin":"28/04/2018",
+						"comentarios":[
+							{
+								"id":"pepe",
+								"Texto":"Que lindo lugar!",
+								"Fecha":"27/03/2018",
+								"Horario":"02:15"
+							}
+						],
+						"fotos":[],
+						"tipo":"Rama Mixta"
+					},
+                      {
+						"nombre":"Unidad Scout Padre Juan Luis",
+                                                "numeracion":1,
+						"edad_minima":11,
+						"edad_maxima":13,
+						"fechaInscripcion_inicio":"7/04/2018",
+						"fechaIscripcion_fin":"28/04/2018",
+						"comentarios":[
+							{
+								"id":"pepe",
+								"Texto":"Que lindo lugar!",
+								"Fecha":"27/03/2018",
+								"Horario":"02:15"
+							}
+						],
+						"fotos":[],
+						"tipo":"Rama Mixta"
+					},
+					{
+						"nombre":"Comunidad Caminante Romeo Farina",
+                                                "numeracion":2,
+						"edad_minima":14,
+						"edad_maxima":17,
+						"fechaInscripcion_inicio":"7/04/2018",
+						"fechaIscripcion_fin":"28/04/2018",
+						"comentarios":[],
+						"fotos":[],
+						"tipo":"Rama Mixta"
+					}
+                    {
+						"nombre":"Comunidad Rover Jorge Graiff",
+                                                "numeracion":2,
+						"edad_minima":17,
+						"edad_maxima":21,
+						"fechaInscripcion_inicio":"7/04/2018",
+						"fechaIscripcion_fin":"28/04/2018",
+						"comentarios":[],
+						"fotos":[],
+						"tipo":"Rama Mixta"
 					}
 				]
 			},
@@ -86,7 +198,7 @@
 					"provincia":"Buenos Aires",
 					"pais":"Argentina",
 					"latitud":-38.721432,
-					"longitud":-62.274445				
+					"longitud":-62.274445000000014			
 				},
 				"ramas":
 				[
