@@ -80,7 +80,7 @@ function mostrarInfoGrupo(nombre_cod) {
             $("#boddy2").append($("<dd></dd>").text(grupo.religion));
 
             centrarMapa(grupo.ubicacion.latitud,grupo.ubicacion.longitud);
-            crearGaleria(obtenerImagenes(nombre_cod));
+            crearGaleria(obtenerImagenesGrupo(nombre_cod));
         }
     });
     
@@ -130,7 +130,7 @@ function obtenerLocalizacionGrupos() {
    });
     return retorno;
 }
-function obtenerImagenes(nombre_cod) {
+function obtenerImagenesGrupo(nombre_cod) {
     var retorno = new Array();
     $.each(datos, function (index, grupo) {
         if (nombre_cod == (grupo.codigo)) {

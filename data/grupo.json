@@ -49,7 +49,7 @@
 					},
                       {
 						"nombre":"Unidad Traulen",
-                                                "numeracion":1,
+                                                "numeracion":2,
 						"edad_minima":11,
 						"edad_maxima":13,
 						"fechaInscripcion_inicio":"1/03/2018",
@@ -67,7 +67,7 @@
 					},
 					{
 						"nombre":"Comunidad Caminantes Penihuen",
-                                                "numeracion":2,
+                                                "numeracion":3,
 						"edad_minima":14,
 						"edad_maxima":17,
 						"fechaInscripcion_inicio":"1/03/2018",
@@ -78,7 +78,7 @@
 					},
                     {
 						"nombre":"Comunidad Rover HuacheluHuaun",
-                                                "numeracion":2,
+                                                "numeracion":4,
 						"edad_minima":17,
 						"edad_maxima":21,
 						"fechaInscripcion_inicio":"1/03/2018",
@@ -114,7 +114,7 @@
 				[	
 					{
 						"nombre":"Manada Peña de la Paz",
-                                                "numeracion":1,
+                                                "numeracion":5,
 						"edad_minima":7,
 						"edad_maxima":11,
 						"fechaInscripcion_inicio":"7/04/2018",
@@ -132,7 +132,7 @@
 					},
                       {
 						"nombre":"Unidad Scout Padre Juan Luis",
-                                                "numeracion":1,
+                                                "numeracion":6,
 						"edad_minima":11,
 						"edad_maxima":13,
 						"fechaInscripcion_inicio":"7/04/2018",
@@ -150,7 +150,7 @@
 					},
 					{
 						"nombre":"Comunidad Caminante Romeo Farina",
-                                                "numeracion":2,
+                                                "numeracion":7,
 						"edad_minima":14,
 						"edad_maxima":17,
 						"fechaInscripcion_inicio":"7/04/2018",
@@ -161,7 +161,7 @@
 					},
                     {
 						"nombre":"Comunidad Rover Jorge Graiff",
-                                                "numeracion":2,
+                                                "numeracion":8,
 						"edad_minima":17,
 						"edad_maxima":21,
 						"fechaInscripcion_inicio":"7/04/2018",
@@ -204,7 +204,7 @@
 				[
 					{
 						"nombre":"Manada Mowgli",
-                                                "numeracion":3,
+                                                "numeracion":9,
 						"edad_minima":14,
 						"edad_maxima":17,
 						"fechaInscripcion_inicio":"01/04",
