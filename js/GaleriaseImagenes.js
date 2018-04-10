@@ -35,7 +35,7 @@ function endRow() {
 function insertarImagen(imagen, titulo, descripcion) {
     var ret = "<div class=\"col-md-3\"><a href=\"images/" + imagen + "\" data-lightbox=\"example-set\" ";
     ret = ret + "data-title=\"" + titulo + "\"><img src=\"images/" + imagen + "\" class=\"img-thumbnail\"></a>";
-    ret = ret + "<p>" + descripcion + "</p></div>";
+    ret = ret + "<center><p>" + descripcion + "</p></center></div>";
     return ret;
 }
 

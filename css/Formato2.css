@@ -17,6 +17,10 @@ body {
  #panelDerecho{
      float:left;
  }
+ .panel-title {
+	font-weight: bolder;
+	font-size:24px;
+ }
 
 
 #filtros{
@@ -65,21 +69,31 @@ body {
 #panelImagenes{
 	border-width:1px;
 	border-color:#000000;
+	margin-top: 0px;
 }
 #panelimagenesHead{
+	font-weight:bolder;
+	border-color:#000000;
     background-color: #a94442;
-    border-color: a94442;
     color:white;
 }
 #bodyimagenes{
 	color:white;
-	background-color: #AAAAAA;
+	background-color: rgba(240, 216, 93, 0.86);
+	color: black;
+	font-size: 15px;
+}
+#bodyinfo{
+	padding-bottom:0px;
 }
 #panelInfo{
     width: 100%;
+    padding-bottom:10px;
 }
 #media{
-    width: 100%;
+    width: 80%;
+    
+    margin-right:20px;
 }
 .panel-info{
 	border-width:0px;
