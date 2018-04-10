@@ -40,23 +40,38 @@ panel{
 }
 #gruposyRamas{
     background-color: #FFFFFF; 
-   height: 200px;
-  overflow-y:scroll;
+     overflow-y:scroll;
+  height: 200px;
 }
 h2{
   color:white;
 }
 #panelInfo{
   background-color:#003557;
+  margin:40px;
 }
 #panelImagenes{
   background-color:#003557;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+#PanelInformacion{
+	background-color:#003557;
+}
+#media{
+ margin-bottom: 0px;
+margin-top: 30px;
+padding: 0px 40px;
+height: 150px
+}
+#bodyimagenes{
+background-color: rgba(25, 34, 36, 0.55);
+
 }
 #bodyinfo{
-  height:300;
-  overflow-y:scroll;
- 
 
+  overflow-y:scroll;
+  height:300px;
 }
 #info{
     column-count: 3;
@@ -141,4 +156,7 @@ test{
 
 #boddy2{
  column-count: 3
+}
+#media{
+width:90%;
 }
