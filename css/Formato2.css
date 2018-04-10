@@ -41,7 +41,9 @@ body {
  #panelDerecho{
      float:left;
  }
- 
+ #margen{
+     background-color: #a94442;
+ }
 #PanelInformacionHead{
     background-color: #a94442;
     border-color: a94442;
@@ -55,6 +57,9 @@ body {
 }
 #panelInfo{
     width: 80%;
+}
+#media{
+    width: 60%;
 }
  /*
 #Comentarios{

@@ -29,6 +29,9 @@ body {
   padding-left: 5em;
   padding-right: 5em;
 }
+ #margen{
+     background-color: #003557;
+ }
 panel{
   background-color: #003557 
 }
