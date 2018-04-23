@@ -2,7 +2,7 @@ var datos;
 var codigo;
 var enGrupo;
 
-$(function () {
+$(document).ready(function ()    {
     $.get("./data/grupo.json", function (data) {
        mostrarGrupo(data.Asociacion.grupos);
        $('#panel-nuevoComentario').hide();
@@ -185,7 +185,11 @@ function obtenerLocalizacionGrupos() {
         grupoI.push(grupo.ubicacion.longitud);
         grupoI.push(grupo.codigo);
         retorno.push(grupoI);  
+        
+        var posicion=new google.maps.LatLng(grupo.ubicacion.latitud,grupo.ubicacion.longitud)
+        map.setCenter(posicion);
    });
+   
     return retorno;
 }
 function obtenerImagenesGrupo(nombre_cod) {
